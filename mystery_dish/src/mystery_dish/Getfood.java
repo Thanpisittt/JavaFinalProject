@@ -6,16 +6,30 @@ public class Getfood {
 		Scanner scan =new Scanner(System.in);
 		randomfood food = new randomfood();
 		String ans ="";
-		int num;
+		int nummeal,numnutrition =0;
 		System.out.println("PRESS [1] Breakfast\nPRESS [2] Lunch\nPRESS [3] Dinner"  );
 		System.out.print("What meal do you want to eat : "  );
-		   num =scan.nextInt	();
+		nummeal =scan.nextInt	();
 		   System.out.println();
-		 while(num < 1 || num > 3)
+		   while(nummeal < 1 || nummeal > 3)
 		   {
 			   System.out.println("PRESS [1] Breakfast\nPRESS [2] Lunch\nPRESS [3] Dinner"  );
 				System.out.print("What meal do you want to eat : "  );
-				 num =scan.nextInt();
+				nummeal =scan.nextInt();
+		   }
+		   //meal check
+		   if(nummeal == 1 || nummeal == 2) {
+		   System.out.println("PRESS [0] Normal nutrition\nPRESS [1] Protein Rich \nPRESS [2] Carb Rich"  );
+			System.out.print("What nutrition do you want to eat : "  );
+			numnutrition =scan.nextInt	();
+			   System.out.println();
+			   while(numnutrition < 0 || numnutrition > 3)
+			   {
+				   System.out.println("PRESS [1] Protein Rich \nPRESS [2] Carb Rich\nPRESS [3] Normal nutrition"  );
+					System.out.print("What nutrition do you want to eat : "  );
+					numnutrition =scan.nextInt	();
+			   }
+			   //nutrition check
 		   }
 		 
 		 System.out.print("Are you Muslims? y/n: ");
@@ -25,25 +39,57 @@ public class Getfood {
 				System.out.print("Are you Muslims? y/n: "  );
 				 ans =scan.next();
 			}
-			
+			//halal check
 		 
 		   
-	      if(ans.equalsIgnoreCase("y")&&num == 1 ){
+	      if(ans.equalsIgnoreCase("y")&&nummeal == 1 && numnutrition == 0){
 				System.out.println(food.getRandomFoodhalal_B());
 			}
-		  if(ans.equalsIgnoreCase("n")&&num == 1) {
+	      if(ans.equalsIgnoreCase("y")&&nummeal == 1 && numnutrition == 1 ){
+				System.out.println(food.getRandomFoodhalal_B_Protein());
+			}
+	      if(ans.equalsIgnoreCase("y")&&nummeal == 1 && numnutrition == 2 ){
+				System.out.println(food.getRandomFoodhalal_B_Carb());
+			}
+	      ////////check halal_B
+	      
+		  if(ans.equalsIgnoreCase("n")&&nummeal == 1&& numnutrition == 0) {
 		      System.out.println(food.getRandomFoodnonhalal_B());
 			}
-		  if(ans.equalsIgnoreCase("y")&&num == 2) {
+		  if(ans.equalsIgnoreCase("n")&&nummeal == 1&& numnutrition == 1) {
+		      System.out.println(food.getRandomFoodnonhalal_B_Protein());
+			}
+		  if(ans.equalsIgnoreCase("n")&&nummeal == 1&& numnutrition == 2) {
+		      System.out.println(food.getRandomFoodnonhalal_B_Carb());
+			}
+		  ///////check nonhalal_B
+		  
+		  if(ans.equalsIgnoreCase("y")&&nummeal == 2 && numnutrition == 0) {
 		      System.out.println(food.getRandomFoodhalal_L());
 			}
-		  if(ans.equalsIgnoreCase("n")&&num == 2) {
+		  if(ans.equalsIgnoreCase("y")&&nummeal == 2 && numnutrition == 1) {
+		      System.out.println(food.getRandomFoodhalal_L_Protein());
+			}
+		  if(ans.equalsIgnoreCase("y")&&nummeal == 2 && numnutrition == 2) {
+		      System.out.println(food.getRandomFoodhalal_L_Carb());
+			}
+		  ///////check halal_L
+		  
+		  if(ans.equalsIgnoreCase("n")&&nummeal == 2 && numnutrition == 0) {
 		      System.out.println(food.getRandomFoodnonhalal_L());
 			}
-		  if(ans.equalsIgnoreCase("y")&&num == 3) {
+		  if(ans.equalsIgnoreCase("n")&&nummeal == 2 && numnutrition == 1) {
+		      System.out.println(food.getRandomFoodnonhalal_L_Protein());
+			}
+		  if(ans.equalsIgnoreCase("n")&&nummeal == 2 && numnutrition == 2) {
+		      System.out.println(food.getRandomFoodnonhalal_L_Carb());
+			}
+		  ///////check nonhalal_L
+		  
+		  if(ans.equalsIgnoreCase("y")&&nummeal == 3) {
 		      System.out.println(food.getRandomFoodhalal_D());
 			}
-		  if(ans.equalsIgnoreCase("n")&&num == 3) {
+		  if(ans.equalsIgnoreCase("n")&&nummeal == 3) {
 		      System.out.println(food.getRandomFoodnonhalal_D());
 			}
 		
