@@ -15,7 +15,7 @@ import java.awt.event.ActionEvent;
 
 public class fifthWindow extends JFrame {
 	 random rd = new random();
-	 String result = "C:\\Users\\555\\Desktop\\Food\\";
+	 String result = "src\\Food\\";
 	 String food = "";
 	private JPanel contentPane;
 	
@@ -27,7 +27,6 @@ public class fifthWindow extends JFrame {
 					e.printStackTrace();
 				}
 			}
-			
 	public fifthWindow() {
 		setTitle("Food");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -77,7 +76,7 @@ public class fifthWindow extends JFrame {
 		contentPane.add(FoodIm);
 		
 		JLabel Bg = new JLabel("");
-		Bg.setIcon(new ImageIcon("C:\\Users\\555\\Desktop\\JFramePhoto\\Result.png"));
+		Bg.setIcon(new ImageIcon("src\\JFramePhoto\\Result.png"));
 		Bg.setBounds(0, 0, 595, 422);
 		contentPane.add(Bg);
 		

@@ -40,7 +40,9 @@ public class forthWindow extends JFrame {
 				indexWindow.halal=0;
 				fifthWindow frame = new fifthWindow();
 				frame.setVisible(true);
+				
 			}
+			
 		});
 		Yes.setFont(new Font("Showcard Gothic", Font.PLAIN, 25));
 		Yes.setBounds(251, 208, 136, 44);
@@ -78,7 +80,7 @@ public class forthWindow extends JFrame {
 		Back.setBounds(57, 377, 87, 33);
 		contentPane.add(Back);
 		JLabel Bg = new JLabel("");
-		Bg.setIcon(new ImageIcon("C:\\Users\\555\\Desktop\\JFramePhoto\\Halal.png"));
+		Bg.setIcon(new ImageIcon("src\\JFramePhoto\\Halal.png"));
 		Bg.setFont(new Font("Tahoma", Font.BOLD, 11));
 		Bg.setBounds(0, -11, 594, 432);
 		contentPane.add(Bg);

@@ -95,7 +95,7 @@ public class secondWindow extends JFrame {
 		contentPane.add(btnNewButton_3);
 		
 		JLabel Bg = new JLabel("");
-		Bg.setIcon(new ImageIcon("C:\\Users\\555\\Desktop\\JFramePhoto\\MealTime.png"));
+		Bg.setIcon(new ImageIcon("src\\JFramePhoto\\MealTime.png"));
 		Bg.setBounds(0, -11, 594, 432);
 		contentPane.add(Bg);
 	

@@ -60,7 +60,7 @@ public class indexWindow extends JFrame {
 		});
 		
 		JLabel Bg = new JLabel("");
-		Bg.setIcon(new ImageIcon("C:\\Users\\555\\Desktop\\JFramePhoto\\Mfood.png"));
+		Bg.setIcon(new ImageIcon("src\\JFramePhoto\\Mfood.png"));
 		Bg.setBounds(-12, -326, 2002, 1080);
 		contentPane.add(Bg);
 		

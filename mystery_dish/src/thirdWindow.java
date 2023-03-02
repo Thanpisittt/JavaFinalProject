@@ -85,7 +85,7 @@ public class thirdWindow extends JFrame {
 		contentPane.add(Back);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\555\\Desktop\\JFramePhoto\\Nutri.png"));
+		lblNewLabel_1.setIcon(new ImageIcon("src\\JFramePhoto\\Nutri.png"));
 		lblNewLabel_1.setBounds(0, -30, 594, 451);
 		contentPane.add(lblNewLabel_1);
 	}
